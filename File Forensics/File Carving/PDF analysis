@@ -1,0 +1,15 @@
+1- run pdf-parser to get a summary about what the pdf contains
+  pdf-parser --stats file.pdf 
+If in the output we hvae something like " /Embeddedfile 1: 3"
+it means there's exactly 1 Embeddedfile inside, with an object id of 3
+
+2-Extract the embedded file :
+  pdf-parser --object 3 --raw --filter file.pdf > out
+Print the extracted file 
+  cat out
+If it's some base-64 encoded string, decode it and put the output on another file:
+  base64 -di  out > out2
+Now check the type of the file
+  File out2
+If it's a JPEG for exemple
+  mv out2 out3.jpeg 
