@@ -34,5 +34,5 @@ end of the file. There can be more bytes after the jpg footer, but any jpg viewe
 back end of the file. These bytes act as a sort of "table of contents" that tells Java how far forward in the file to jump for other pieces of Java-specific data. The table of
 contents in a gifar never tells Java to look as far forward in the file as the jpg footer or beyond.
   
-![](https://www.usna.edu/Users/cs/wcbrown/courses/si110AY13S/lec/l01/img/gifar.png)
+<img src="https://www.usna.edu/Users/cs/wcbrown/courses/si110AY13S/lec/l01/img/gifar.png">
   
