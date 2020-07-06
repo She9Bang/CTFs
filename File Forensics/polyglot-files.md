@@ -28,7 +28,7 @@ Polyglot files are often used to bypass protection based on file types. Many app
 readable Phar file,and Phar files are not often allowed by file upload functionalities. So a Phar-JPEG file allows the malicious upload to look like a harmless JPEG file to bypass upload restrictions but still retain the capabilities of a Phar file.</p>
 
 
-<h3>-"GIFAR" Files:<h3/>
+<h3>-"GIFAR" Files:</h3>
 <p>we can create a single file (sequence of bytes) that satisfies the formatting rules both for an image format and for an "archive" format.
 for instance, we can create a single file that is a valid .jpg image file and a valid Java .jar (a file that's intended to be processed by the program "java"). 
 This works because a jpg file must have a jpg header as its first several bytes, and must have a jpg footer indicating the end of the image data, but not necessarily the 
