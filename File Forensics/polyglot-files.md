@@ -5,7 +5,7 @@ to be interpreted are called a file format.
 File  extensions can lie! The only real way to know the type of the file is to examine its bytes and see what format it's in. Usually, the first few bytes tell you the type
 reliably</p>
 
-<h1>-File headers:</h1>
+<h3>-File headers:</h3>
 <p>A header is a short sequence of data at the head, or beginning, of the file data, which doesn't change for all the files with the same type.</p>
 <p>png	89 50 4e 47	> .PNG/p>
 <p>jpg	FF D8 FF E0 >	ÿØÿà/p>
@@ -18,7 +18,7 @@ reliably</p>
 
 
 
-<h2>-What are Polyglots ?</h2>
+<h3>-What are Polyglots ?</h3>
 <p>Polyglots, in a security context, are files that are a valid form of multiple different file types.
 Polyglot files are often used to bypass protection based on file types. Many applications that allow users to upload files only allow uploads of certain types, such as JPEG, GIF,DOC, so as to prevent users from uploading potentially dangerous files like JS files, PHP files or Phar files.</p>
 
@@ -28,7 +28,7 @@ Polyglot files are often used to bypass protection based on file types. Many app
 readable Phar file,and Phar files are not often allowed by file upload functionalities. So a Phar-JPEG file allows the malicious upload to look like a harmless JPEG file to bypass upload restrictions but still retain the capabilities of a Phar file.</p>
 
 
-<h4>-"GIFAR" Files:<h4/>
+<h3>-"GIFAR" Files:<h3/>
 <p>we can create a single file (sequence of bytes) that satisfies the formatting rules both for an image format and for an "archive" format.
 for instance, we can create a single file that is a valid .jpg image file and a valid Java .jar (a file that's intended to be processed by the program "java"). 
 This works because a jpg file must have a jpg header as its first several bytes, and must have a jpg footer indicating the end of the image data, but not necessarily the 
