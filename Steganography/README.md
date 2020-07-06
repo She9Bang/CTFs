@@ -23,3 +23,20 @@
 <p>we can extract the thumbnails with exiftools </p>
 <p>exiftool -b -ThumbnailImage file.jpg > thumbnail.jpg </p>
 
+<h2> PDF Analysis : </h2>
+<h5>1- run pdf-parser to get a summary about what the pdf contains </h5>
+  <p>pdf-parser --stats file.pdf </p>
+ <p>If in the output we hvae something like " /Embeddedfile 1: 3"</p>
+ <p>it means there's exactly 1 Embeddedfile inside, with an object id of 3</p>
+
+<h5>2-Extract the embedded file : </h5>
+   <p>pdf-parser --object 3 --raw --filter file.pdf > out</p>
+ <p>Print the extracted file </p>
+   <p>cat out</p>
+ <p>If it's some base-64 encoded string, decode it and put the output on another file:</p>
+   <p>base64 -di  out > out2</p>
+ <p>Now check the type of the file</p>
+   <p>File out2</p>
+ <p>If it's a JPEG for exemple</p>
+   <p>mv out2 out3.jpeg </p>
+
