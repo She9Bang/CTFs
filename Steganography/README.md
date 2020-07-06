@@ -1,4 +1,4 @@
-<h1>Scanning and detection :</h1>
+<h2>Scanning and detection :</h2>
 <p>File image.jpg : check which type of file it is </p>
 <p>String file.txt : gets the hidden text (by default defaut, seraches for printables (ASCII))  </p>
 <p>exiftool file.jpg : read the metadata of the file (size, permission, width, height...etc)  </p>
